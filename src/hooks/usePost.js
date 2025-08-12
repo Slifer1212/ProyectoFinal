@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { collection, query, orderBy, getDocs } from 'firebase/firestore';
-import { db } from '../config/firebase';
+import { useState, useEffect } from "react";
+import { collection, query, orderBy, getDocs } from "firebase/firestore";
+import { db } from "../config/firebase";
 
 export const usePosts = () => {
   const [posts, setPosts] = useState([]);
@@ -9,7 +9,7 @@ export const usePosts = () => {
   const loadPosts = async () => {
     try {
       setLoading(true);
-      const q = query(collection(db, 'posts'), orderBy('timestamp', 'desc'));
+      const q = query(collection(db, "posts"), orderBy("timestamp", "desc"));
       const querySnapshot = await getDocs(q);
       const postsData = [];
       querySnapshot.forEach((doc) => {
@@ -17,7 +17,7 @@ export const usePosts = () => {
       });
       setPosts(postsData);
     } catch (error) {
-      console.error('Error al cargar posts:', error);
+      console.error("Error al cargar posts:", error);
     } finally {
       setLoading(false);
     }
