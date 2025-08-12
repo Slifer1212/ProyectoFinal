@@ -1,30 +1,15 @@
 import React, { useState } from 'react';
 import Header from './components/Header/Header';
-import PostList from './components/Postlist/PostList';
+import PostList from './components/PostList/PostLists';  // Corregido: PostList con L mayúscula
 import AuthModal from './components/AuthModal/AuthModal';
 import NewPostModal from './components/NewPostModal/NewPostModal';
 import Toast from './components/Toast/Toast';
 import { useAuth } from './hooks/useAuth';
-import { usePosts } from './hooks/usePosts';
-import { authService } from './services/authService';
+import { usePosts } from './hooks/usePosts';  // Corregido: usePosts, no usePost
+import { authService } from './services/authService';  // Corregido: authService, no AuthServices
 import { postService } from './services/postService';
 import './App.css';
 
-// Inyectar estilos CSS
-const injectStyles = () => {
-  const styleElement = document.createElement('style');
-  styleElement.textContent = `
-    ${headerStyles}
-    ${postCardStyles}
-    ${postListStyles}
-    ${authModalStyles}
-    ${newPostModalStyles}
-    ${toastStyles}
-  `;
-  document.head.appendChild(styleElement);
-};
-
-injectStyles();
 
 function App() {
   const { user, loading: authLoading } = useAuth();

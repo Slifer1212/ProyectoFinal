@@ -1,4 +1,4 @@
-const newPostModalStyles 
+
 .new-post-modal {
   max-width: 32rem;
 }
@@ -62,4 +62,9 @@ const newPostModalStyles
 
 .cancel-btn-secondary:hover {
   background: rgba(75, 85, 99, 0.5);
+}
+
+.btn-icon {
+  width: 1rem;
+  height: 1rem;
 }
