@@ -1,0 +1,65 @@
+const newPostModalStyles 
+.new-post-modal {
+  max-width: 32rem;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  min-height: 8rem;
+  resize: vertical;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.form-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #c084fc;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.form-textarea.error {
+  border-color: #ef4444;
+}
+
+.char-count {
+  text-align: right;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: -0.5rem;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.modal-actions .submit-btn,
+.modal-actions .cancel-btn-secondary {
+  flex: 1;
+}
+
+.cancel-btn-secondary {
+  padding: 0.75rem;
+  background: rgba(107, 114, 128, 0.5);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cancel-btn-secondary:hover {
+  background: rgba(75, 85, 99, 0.5);
+}
