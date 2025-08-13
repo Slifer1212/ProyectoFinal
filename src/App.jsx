@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Header from './components/Header/Header';
-import PostList from './components/Postlist/PostList'; 
-import AuthModal from './components/AuthModal/AuthModal';
+import PostList from './components/PostList/postList';
+import AuthModal from './components/AuthModal/authModal';
 import NewPostModal from './components/NewPostModal/NewPostModal';
-import Toast from './components/Toast/Toast';
+import Toast from './components/Toast/toast';
 import { useAuth } from './hooks/useAuth';
-import { usePosts } from './src/hooks/usePost'; 
-import { authService } from './src/services/authService';
+import { usePosts } from './hooks/usePost'; 
+import { authService } from './services/AuthServices';
 import { postService } from './services/postService';
 import './App.css';
 
