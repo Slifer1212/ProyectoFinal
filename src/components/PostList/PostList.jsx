@@ -1,5 +1,5 @@
 import React from 'react';
-import PostCard from '../PostCard/postCard';
+import PostCard from '../PostCard/PostCard';
 import { MessageSquare } from 'lucide-react';
 import './PostList.css';
 
